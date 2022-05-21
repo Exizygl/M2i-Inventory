@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  background-color: #E3001B;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+header img {
+  display: block;
+  width: 20%;
+  margin-left: 5rem;
+  margin-top: 1rem;
+}
+@media (max-width: 600px) {
+  header img {
+    width: 30%;
+    flex-direction: column;
+    margin: 2rem auto;
+  }
+}
+header nav {
+  margin-right: 5rem;
+  margin-top: 5rem;
+}
+@media (max-width: 600px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+}
+header nav a {
+  width: 10%;
+  margin: 1rem;
+  text-align: center;
+  margin-top: 3.5rem;
+  font-size: 2rem;
+  margin-bottom: auto;
+  color: white;
+  padding-top: 2.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  header nav a {
+    width: 100%;
+    font-size: 1.6rem;
+    color: white;
+    padding-top: 0rem;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 2rem;
+    margin: auto;
+  }
+}
+
+.recherche, .selection {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 1.6rem;
+}
+.recherche div, .selection div {
+  vertical-align: middle;
+}
+.recherche div .inputSearch, .selection div .inputSearch {
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  transition: 0.3s;
+}
+.recherche div .inputSearch:focus, .selection div .inputSearch:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.nope {
+  display: none;
+}
+
+.form-group {
+  margin: 1rem 0;
+  text-align: center;
+  display: flex;
+  font-size: 1.6rem;
+  width: 100%;
+}
+.form-group label {
+  margin-right: 1rem;
+  width: 50%;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .form-group label {
+    width: 40%;
+  }
+}
+
+.form-group {
+  text-align: center;
+  display: flex;
+  font-size: 1.6rem;
+  width: 100%;
+}
+.form-group .boutton-ajout, .form-group .info-erreur {
+  text-align: center;
+  margin: auto;
+}
+.form-group input, .form-group textarea, .form-group select {
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+.form-group .info-erreur {
+  color: #E3001B;
+}
+
+#resultat {
+  margin: 1rem 0;
+  text-align: center;
+  display: flex;
+  font-size: 1.6rem;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  #resultat {
+    flex-direction: column;
+  }
+}
+#resultat .ogFiltre, #resultat .filter {
+  width: 18%;
+  border: solid black;
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem;
+}
+@media (max-width: 768px) {
+  #resultat .ogFiltre, #resultat .filter {
+    width: 90%;
+    margin: auto;
+  }
+}
+#resultat .ogFiltre .titreCategorie, #resultat .filter .titreCategorie {
+  margin: 1rem;
+}
+#resultat .ogFiltre .titreCategorie div, #resultat .filter .titreCategorie div {
+  margin: 1rem;
+}
+#resultat .ogListe, #resultat .liste {
+  width: 80%;
+}
+@media (max-width: 768px) {
+  #resultat .ogListe, #resultat .liste {
+    width: 100%;
+  }
+}
+#resultat .ogListe .titre, #resultat .liste .titre {
+  text-transform: uppercase;
+}
+#resultat .ogListe .containerMaterial, #resultat .liste .containerMaterial {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 7rem;
+  border-bottom: black solid;
+}
+@media (max-width: 768px) {
+  #resultat .ogListe .containerMaterial, #resultat .liste .containerMaterial {
+    display: flex;
+    flex-wrap: wrap;
+    height: 20rem;
+  }
+}
+#resultat .ogListe .containerMaterial .MaterialNom, #resultat .ogListe .containerMaterial .MaterialCodebar, #resultat .ogListe .containerMaterial .MaterialDetail, #resultat .ogListe .containerMaterial .MaterialVille, #resultat .ogListe .containerMaterial .MaterialLieux, #resultat .liste .containerMaterial .MaterialNom, #resultat .liste .containerMaterial .MaterialCodebar, #resultat .liste .containerMaterial .MaterialDetail, #resultat .liste .containerMaterial .MaterialVille, #resultat .liste .containerMaterial .MaterialLieux {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#resultat .ogListe .containerMaterial .MaterialNom, #resultat .ogListe .containerMaterial .MaterialCodebar, #resultat .ogListe .containerMaterial .MaterialLieux, #resultat .ogListe .containerMaterial .MaterialNombre, #resultat .ogListe .containerMaterial .MaterialVille, #resultat .ogListe .containerMaterial .MaterialDetail, #resultat .ogListe .containerMaterial .option, #resultat .liste .containerMaterial .MaterialNom, #resultat .liste .containerMaterial .MaterialCodebar, #resultat .liste .containerMaterial .MaterialLieux, #resultat .liste .containerMaterial .MaterialNombre, #resultat .liste .containerMaterial .MaterialVille, #resultat .liste .containerMaterial .MaterialDetail, #resultat .liste .containerMaterial .option {
+  margin: auto;
+  font-size: 1.6rem;
+  width: 10%;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  #resultat .ogListe .containerMaterial .MaterialNom, #resultat .ogListe .containerMaterial .MaterialCodebar, #resultat .ogListe .containerMaterial .MaterialLieux, #resultat .ogListe .containerMaterial .MaterialNombre, #resultat .ogListe .containerMaterial .MaterialVille, #resultat .ogListe .containerMaterial .MaterialDetail, #resultat .ogListe .containerMaterial .option, #resultat .liste .containerMaterial .MaterialNom, #resultat .liste .containerMaterial .MaterialCodebar, #resultat .liste .containerMaterial .MaterialLieux, #resultat .liste .containerMaterial .MaterialNombre, #resultat .liste .containerMaterial .MaterialVille, #resultat .liste .containerMaterial .MaterialDetail, #resultat .liste .containerMaterial .option {
+    width: 20%;
+  }
+}
+#resultat .ogListe .containerMaterial .MaterialNom .btn, #resultat .ogListe .containerMaterial .MaterialCodebar .btn, #resultat .ogListe .containerMaterial .MaterialLieux .btn, #resultat .ogListe .containerMaterial .MaterialNombre .btn, #resultat .ogListe .containerMaterial .MaterialVille .btn, #resultat .ogListe .containerMaterial .MaterialDetail .btn, #resultat .ogListe .containerMaterial .option .btn, #resultat .liste .containerMaterial .MaterialNom .btn, #resultat .liste .containerMaterial .MaterialCodebar .btn, #resultat .liste .containerMaterial .MaterialLieux .btn, #resultat .liste .containerMaterial .MaterialNombre .btn, #resultat .liste .containerMaterial .MaterialVille .btn, #resultat .liste .containerMaterial .MaterialDetail .btn, #resultat .liste .containerMaterial .option .btn {
+  width: 10%;
+  text-align: center;
+  font-size: 1.6rem;
+  background-color: #53c8ec;
+  color: white;
+  padding: 1.4rem 2.5rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 5px 5px 0 #20b0dc;
+}
+#resultat .ogListe .containerMaterial .MaterialNom .btn:hover, #resultat .ogListe .containerMaterial .MaterialCodebar .btn:hover, #resultat .ogListe .containerMaterial .MaterialLieux .btn:hover, #resultat .ogListe .containerMaterial .MaterialNombre .btn:hover, #resultat .ogListe .containerMaterial .MaterialVille .btn:hover, #resultat .ogListe .containerMaterial .MaterialDetail .btn:hover, #resultat .ogListe .containerMaterial .option .btn:hover, #resultat .liste .containerMaterial .MaterialNom .btn:hover, #resultat .liste .containerMaterial .MaterialCodebar .btn:hover, #resultat .liste .containerMaterial .MaterialLieux .btn:hover, #resultat .liste .containerMaterial .MaterialNombre .btn:hover, #resultat .liste .containerMaterial .MaterialVille .btn:hover, #resultat .liste .containerMaterial .MaterialDetail .btn:hover, #resultat .liste .containerMaterial .option .btn:hover {
+  background-color: #53c8ec;
+  padding: 1.6rem 2.7rem;
+}
+@media (max-width: 768px) {
+  #resultat .ogListe .containerMaterial .MaterialNom .btn, #resultat .ogListe .containerMaterial .MaterialCodebar .btn, #resultat .ogListe .containerMaterial .MaterialLieux .btn, #resultat .ogListe .containerMaterial .MaterialNombre .btn, #resultat .ogListe .containerMaterial .MaterialVille .btn, #resultat .ogListe .containerMaterial .MaterialDetail .btn, #resultat .ogListe .containerMaterial .option .btn, #resultat .liste .containerMaterial .MaterialNom .btn, #resultat .liste .containerMaterial .MaterialCodebar .btn, #resultat .liste .containerMaterial .MaterialLieux .btn, #resultat .liste .containerMaterial .MaterialNombre .btn, #resultat .liste .containerMaterial .MaterialVille .btn, #resultat .liste .containerMaterial .MaterialDetail .btn, #resultat .liste .containerMaterial .option .btn {
+    width: 33%;
+    padding: 1rem 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  #resultat .ogListe .containerMaterial .TitleDetail, #resultat .liste .containerMaterial .TitleDetail {
+    display: none;
+    height: 0 rem;
+  }
+}
+
+.Even {
+  background-color: #d1edf5;
+}
+
+.Odd {
+  background-color: #fefefe;
+}
+
+.infoMaterial {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 7rem;
+}
+@media (max-width: 768px) {
+  .infoMaterial {
+    display: flex;
+    flex-wrap: wrap;
+    height: 20rem;
+  }
+}
+.infoMaterial .info {
+  width: 7%;
+  margin: 2rem;
+  font-size: 1.6rem;
+}
+
+.option {
+  text-align: center;
+}
+.option a {
+  text-decoration: none;
+  margin: auto;
+  color: black;
+}
+
+/*# sourceMappingURL=main.css.map */
