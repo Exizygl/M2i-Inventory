@@ -29,18 +29,18 @@ if (isset($_POST["email"])) {
             //on indique que l'on utilse le protocol SMTP
             $phpmailer->isSMTP();
             
-            $phpmailer->Host = 'smtp.gmail.com';
-            $phpmailer->SMTPAuth = true;
-            $phpmailer->SMTPSecure = 'tls';
-            $phpmailer->Port = 587;
-            $phpmailer->Username = 'testphpmailerprojet@gmail.com';
-            $phpmailer->Password = 'Chaostai1';
+            // $phpmailer->Host = 'smtp.gmail.com';
+            // $phpmailer->SMTPAuth = true;
+            // $phpmailer->SMTPSecure = 'tls';
+            // $phpmailer->Port = 587;
+            // $phpmailer->Username = 
+            // $phpmailer->Password = 
 
 
             //Expéditeur
-            $phpmailer->From = "testphpmailerprojet@gmail.com";
-            $phpmailer->FromName = "test";
-            $phpmailer->setFrom("testphpmailerprojet@gmail.com","test");
+            // $phpmailer->From = 
+            // $phpmailer->FromName = ;
+            // $phpmailer->setFrom();
 
 
             $phpmailer->addAddress($email);
